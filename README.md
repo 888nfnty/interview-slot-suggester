@@ -37,4 +37,27 @@ You don't need Rust, VS Code, or any tech setup. Just download the file for your
 
 ### Step 4: Run the Program
 - In terminal, type (replace "your_calendar" with your name from the export we just did):
-./interview-slot-suggester --ics-files your_calendar.ics --days-ahead 7 --timezone Europe/London --buffer-mins 15
+- ./interview-slot-suggester --ics-files your_calendar.ics --days-ahead 7 --timezone Europe/London --buffer-mins 15
+
+- Hit Enter. Output: Colorful table of suggestions!
+- Tips:
+- Multiple files: `./interview-slot-suggester --ics-files file1.ics --ics-files file2.ics`
+- Custom: --start-hour 8 --end-hour 17 (24h format).
+- Errors? It gives friendly messages (e.g., "Invalid .ics—try re-exporting").
+
+### Step 5: Example Output
+Suggested 30-min interview slots (prioritizing mornings) in Europe/London: (blue)
+Time (Local)          | Label                  | Score
+2025-09-23 10:00 BST  | 30 mins (Morning Peak!)| (Score: 1)
+...
+
+Pick one for your next talent chat—remember, a genuine conversation is the best investment. (Dale Carnegie nod) (magenta)
+
+### Troubleshooting (Non-Tech Friendly)
+- "Permission denied"? Mac/Linux: Type `chmod +x interview-slot-suggester` > Enter > Retry.
+- No colors? Your terminal might not support—output still works plain.
+- Big calendar slow? Use --days-ahead 5 to limit.
+- Wrong timezone? List at timezonedb.com—e.g., Europe/London for you.
+- Questions? Message me on LinkedIn!
+
+Built with ❤️ by Aryaman for Flowdesk interview. Excited to chat!
