@@ -1,0 +1,13 @@
+[package]
+name = "interview-slot-suggester"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+clap = { version = "4.5", features = ["derive"] }
+chrono = "0.4"
+chrono-tz = "0.10.4"
+anyhow = "1.0"
+colored = "3.0.0"
+prettytable = "0.10"
+ical = "0.11"
